@@ -1,0 +1,137 @@
+<svg width="2048" height="2048" viewBox="0 0 2048 2048" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ISLE OF SKRAP - MASTER BLUEPRINT (FULL ISLAND)
+    Scale: 128x128 Tiles (1 Tile = 16px at 2048px resolution)
+    Topology: Two Islands (West/East) separated by The Gutter.
+  -->
+
+  <!-- 1. Background (Deep Ocean Blue) -->
+  <rect x="0" y="0" width="2048" height="2048" fill="#001a33" />
+
+  <!-- 2. Grid System -->
+  <defs>
+    <!-- Minor Grid (1 Tile) -->
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+    <!-- Major Grid (Chunk = 64 Tiles? No, let's do 8 tiles standard) -->
+    <pattern id="grid-major" width="128" height="128" patternUnits="userSpaceOnUse">
+      <rect width="128" height="128" fill="url(#grid)" />
+      <path d="M 128 0 L 0 0 0 128" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    </pattern>
+    
+    <!-- Textures -->
+    <pattern id="wood-hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="10" stroke="#8d6e63" stroke-width="2" />
+    </pattern>
+    <pattern id="metal-grate" width="8" height="8" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" fill="none" stroke="#607d8b" stroke-width="1"/>
+      <circle cx="4" cy="4" r="1" fill="#607d8b"/>
+    </pattern>
+    <radialGradient id="steam-vent" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#00aaff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <rect width="100%" height="100%" fill="url(#grid-major)" />
+
+  <!-- Coordinate Markers -->
+  <text x="20" y="40" font-family="Consolas" fill="#4dabf7" font-size="24">X:0 (West)</text>
+  <text x="2000" y="40" font-family="Consolas" fill="#4dabf7" font-size="24" text-anchor="end">X:128 (East)</text>
+  <text x="1024" y="40" font-family="Consolas" fill="#4dabf7" font-size="24" text-anchor="middle">X:64 (Center)</text>
+  <line x1="1024" y1="0" x2="1024" y2="2048" stroke="#4dabf7" stroke-width="2" stroke-dasharray="20,10" opacity="0.3"/> <!-- Center Line -->
+
+  <!-- ========================================= -->
+  <!-- WEST SIDE: FLOTSHEIM (THE HOARDERS)      -->
+  <!-- Style: Organic, Ship Shapes, Brown/Wood   -->
+  <!-- ========================================= -->
+  <g id="Floatsheim">
+    <!-- Main Mass (Irregular Hull Shapes) -->
+    <path d="
+      M 200 400 
+      Q 400 300 600 400 
+      L 850 500 
+      Q 800 1000 850 1400 
+      L 600 1600 
+      Q 300 1500 200 1200 
+      Z" 
+      fill="#3e2723" stroke="#8d6e63" stroke-width="4" opacity="0.9"/>
+    
+    <!-- Stacked Ships (Visualizing height) -->
+    <!-- Level 1 Stack -->
+    <path d="M 300 600 L 700 600 L 650 1200 L 250 1100 Z" fill="url(#wood-hatch)" stroke="#5d4037" stroke-width="3"/>
+    
+    <!-- The Bank (Top Tier) -->
+    <ellipse cx="500" cy="800" rx="150" ry="100" fill="#5d4037" stroke="#ffd700" stroke-width="4"/>
+    <text x="500" y="810" font-family="Consolas" fill="#ffd700" font-size="32" text-anchor="middle" font-weight="bold">BANK (Leviathan Ribs)</text>
+    
+    <!-- Scavenger Docks (West Edge) -->
+    <rect x="150" y="800" width="100" height="300" fill="#4e342e" stroke="#8d6e63"/>
+    <text x="200" y="950" font-family="Consolas" fill="#bcaaa4" font-size="20" text-anchor="middle" transform="rotate(-90 200 950)">SCAVENGER DOCKS</text>
+  </g>
+
+  <!-- ========================================= -->
+  <!-- EAST SIDE: JETTSTROM (THE TRADERS)       -->
+  <!-- Style: Rectangular, Industrial, Grey/Cyan -->
+  <!-- ========================================= -->
+  <g id="Jettstrom">
+    <!-- Main Pontoons (Square/Rigid) -->
+    <rect x="1200" y="400" width="600" height="1200" fill="#263238" stroke="#cfd8dc" stroke-width="4"/>
+    <rect x="1100" y="600" width="200" height="800" fill="#37474f" stroke="#cfd8dc" stroke-width="2"/> <!-- Dock Extension -->
+
+    <!-- The Recycler (North East) -->
+    <rect x="1500" y="500" width="200" height="200" fill="url(#metal-grate)" stroke="#00bcd4" stroke-width="4"/>
+    <circle cx="1600" cy="600" r="60" fill="#b71c1c" opacity="0.8"/>
+    <text x="1600" y="590" font-family="Consolas" fill="white" font-size="24" text-anchor="middle">THE RECYCLER</text>
+    <text x="1600" y="620" font-family="Consolas" fill="white" font-size="16" text-anchor="middle">(Item Sink)</text>
+
+    <!-- Cranes (South East) -->
+    <rect x="1600" y="1300" width="100" height="100" fill="#ffeb3b" stroke="black" stroke-width="2"/>
+    <line x1="1650" y1="1350" x2="1400" y2="1600" stroke="#ffeb3b" stroke-width="8"/> <!-- Boom -->
+    <text x="1650" y="1280" font-family="Consolas" fill="#ffeb3b" font-size="24" text-anchor="middle">CRANE</text>
+
+    <!-- Trade Docks (South) -->
+    <rect x="1300" y="1500" width="300" height="150" fill="#455a64" stroke="white" stroke-dasharray="10,10"/>
+    <text x="1450" y="1580" font-family="Consolas" fill="white" font-size="24" text-anchor="middle">TRADE SHIP DOCK</text>
+  </g>
+
+  <!-- ========================================= -->
+  <!-- CENTER: THE GUTTER &amp; VENT                -->
+  <!-- ========================================= -->
+  <g id="Center">
+    <!-- The Vent (Source of Power) -->
+    <circle cx="1024" cy="1000" r="100" fill="url(#steam-vent)" stroke="#00bcd4" stroke-width="4" stroke-dasharray="20,10">
+      <animate attributeName="r" values="90;110;90" dur="4s" repeatCount="indefinite" />
+    </circle>
+    <text x="1024" y="1010" font-family="Consolas" fill="#000" font-size="24" text-anchor="middle" font-weight="bold">THE STEAM STREAM</text>
+
+    <!-- Bridges (The Tethers) -->
+    <!-- North Bridge -->
+    <rect x="850" y="700" width="350" height="60" fill="#5d4037" stroke="#3e2723" rx="10"/>
+    <text x="1024" y="740" font-family="Consolas" fill="#fff" font-size="20" text-anchor="middle">NORTH BRIDGE (Public)</text>
+
+    <!-- South Bridge (Industrial/Pipes) -->
+    <rect x="850" y="1200" width="350" height="80" fill="#607d8b" stroke="#263238" rx="0"/>
+    <line x1="850" y1="1240" x2="1200" y2="1240" stroke="#00bcd4" stroke-width="4" stroke-dasharray="10,10"/> <!-- Steam Pipe -->
+    <text x="1024" y="1230" font-family="Consolas" fill="#fff" font-size="20" text-anchor="middle">STEAM PIPE BRIDGE</text>
+
+    <!-- The Quest Anchor (Hanging Below) -->
+    <circle cx="1024" cy="1000" r="150" fill="none" stroke="#ffd700" stroke-width="4" stroke-dasharray="5,5" opacity="0.5"/>
+    <text x="1024" y="1150" font-family="Consolas" fill="#ffd700" font-size="16" text-anchor="middle">(Anchor Hangs Below)</text>
+  </g>
+
+  <!-- Labels &amp; Legend -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="400" height="250" fill="rgba(0,0,0,0.8)" stroke="white" stroke-width="4"/>
+    <text x="30" y="50" font-family="Consolas" fill="white" font-size="36" font-weight="bold">ISLE OF SKRAP</text>
+    <text x="30" y="90" font-family="Consolas" fill="#4dabf7" font-size="24">MASTER LAYOUT</text>
+    <text x="30" y="120" font-family="Consolas" fill="#fff" font-size="20">Grid: 128x128 Tiles</text>
+    
+    <text x="30" y="160" font-family="Consolas" fill="#8d6e63" font-size="24" font-weight="bold">WEST: Floatsheim</text>
+    <text x="30" y="190" font-family="Consolas" fill="#cfd8dc" font-size="24" font-weight="bold">EAST: Jettstrom</text>
+    <text x="30" y="220" font-family="Consolas" fill="#00bcd4" font-size="24" font-weight="bold">CENTER: The Vent</text>
+  </g>
+
+</svg>
+

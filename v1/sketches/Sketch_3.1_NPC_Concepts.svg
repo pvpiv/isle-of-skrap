@@ -1,0 +1,47 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#E0F7FA" />
+  
+  <!-- Ground -->
+  <rect x="0" y="500" width="800" height="100" fill="#D7CCC8" />
+
+  <!-- NPC 1: Flotsheim Hoarder -->
+  <g transform="translate(150, 200)">
+    <text x="100" y="-20" font-family="Arial" font-size="24" text-anchor="middle" fill="#3E2723" font-weight="bold">The Hoarder</text>
+    <!-- Body (Bulky) -->
+    <ellipse cx="100" cy="150" rx="80" ry="100" fill="#795548" stroke="black" stroke-width="3" />
+    <!-- Head (Bearded) -->
+    <circle cx="100" cy="50" r="40" fill="#FFCC80" stroke="black" stroke-width="2" />
+    <path d="M 60 50 Q 100 120 140 50" fill="#EFEBE9" stroke="black" /> <!-- Beard -->
+    <!-- Helmet -->
+    <path d="M 60 40 Q 100 -10 140 40" fill="#5D4037" stroke="black" stroke-width="3" />
+    <line x1="100" y1="15" x2="100" y2="-10" stroke="#5D4037" stroke-width="5" /> <!-- Horn -->
+    <!-- Backpack (Huge) -->
+    <rect x="20" y="80" width="160" height="140" fill="#3E2723" stroke="black" stroke-width="3" />
+    <text x="100" y="150" font-family="Arial" font-size="20" text-anchor="middle" fill="white">STUFF</text>
+    <!-- Legs -->
+    <rect x="60" y="240" width="30" height="60" fill="#3E2723" />
+    <rect x="110" y="240" width="30" height="60" fill="#3E2723" />
+  </g>
+
+  <!-- Divider -->
+  <line x1="400" y1="100" x2="400" y2="500" stroke="black" stroke-dasharray="5,5" />
+
+  <!-- NPC 2: Jettstrom Trader -->
+  <g transform="translate(500, 200)">
+    <text x="100" y="-20" font-family="Arial" font-size="24" text-anchor="middle" fill="#01579B" font-weight="bold">The Trader</text>
+    <!-- Body (Slim) -->
+    <rect x="60" y="60" width="80" height="180" fill="#0288D1" stroke="black" stroke-width="3" />
+    <!-- Head (Clean) -->
+    <circle cx="100" cy="40" r="35" fill="#FFCC80" stroke="black" stroke-width="2" />
+    <!-- Hat (Tricorn) -->
+    <path d="M 50 20 L 150 20 L 100 -20 Z" fill="#212121" stroke="black" />
+    <!-- Arms holding Clipboard -->
+    <line x1="140" y1="100" x2="180" y2="120" stroke="black" stroke-width="5" />
+    <rect x="170" y="100" width="40" height="50" fill="#FFF9C4" stroke="black" />
+    <!-- Legs -->
+    <line x1="80" y1="240" x2="80" y2="300" stroke="black" stroke-width="5" />
+    <line x1="120" y1="240" x2="120" y2="300" stroke="black" stroke-width="5" />
+  </g>
+
+</svg>

@@ -1,0 +1,68 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ISLE OF SKRAP - LEVEL 1: JETTSTROM (UPPER DECK)
+    Scale: 64x64 Tiles
+  -->
+
+  <!-- 1. Background (Darker to imply height/sky?) - Keep consistent Blue for Blueprint -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#001a33" />
+
+  <!-- 2. Grid System -->
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-major" width="128" height="128" patternUnits="userSpaceOnUse">
+      <rect width="128" height="128" fill="url(#grid)" />
+      <path d="M 128 0 L 0 0 0 128" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    </pattern>
+    <!-- Hatch Pattern for Grates -->
+    <pattern id="hatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <line x1="0" y1="0" x2="0" y2="8" stroke="#00ffff" stroke-width="1" />
+    </pattern>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid-major)" />
+
+  <!-- 3. Ghost of Level 0 (Outline) for Reference -->
+  <path d="
+    M 300 200 Q 512 100 700 250 L 850 400 Q 900 600 750 800 L 512 900 Q 200 850 150 600 L 200 400 Z" 
+    fill="none" stroke="#ffffff" stroke-width="1" stroke-dasharray="2,2" opacity="0.3"/>
+
+  <!-- 4. Jettstrom Platforms (Industrial Metal Shapes) -->
+  
+  <!-- Main Deck (East Ring) -->
+  <path d="M 600 300 L 900 300 L 900 700 L 600 700 Z" fill="url(#hatch)" stroke="#00ffff" stroke-width="2" opacity="0.5"/>
+  <text x="750" y="350" font-family="Consolas, monospace" fill="#00ffff" font-size="20" text-anchor="middle">MAIN DECK</text>
+
+  <!-- The Recycler Plant (North East) -->
+  <rect x="650" y="250" width="100" height="100" fill="#003333" stroke="#00ffff" stroke-width="3"/>
+  <text x="700" y="300" font-family="Consolas, monospace" fill="#ffffff" font-size="14" text-anchor="middle">THE RECYCLER</text>
+  <text x="700" y="320" font-family="Consolas, monospace" fill="#ffffff" font-size="10" text-anchor="middle">(Item Sink)</text>
+
+  <!-- The Crane (Overhanging the Dock below) -->
+  <rect x="800" y="600" width="60" height="60" fill="#ffff00" stroke="black" stroke-width="1"/>
+  <line x1="830" y1="630" x2="512" y2="900" stroke="#ffff00" stroke-width="2" stroke-dasharray="10,5"/>
+  <text x="830" y="680" font-family="Consolas, monospace" fill="#ffff00" font-size="12" text-anchor="middle">CRANE BASE</text>
+
+  <!-- Catwalks to Central Vent -->
+  <line x1="600" y1="500" x2="540" y2="512" stroke="#ffffff" stroke-width="4"/>
+  <rect x="530" y="490" width="40" height="40" fill="none" stroke="#ff4444" stroke-width="2"/>
+  <text x="500" y="480" font-family="Consolas, monospace" fill="#ff4444" font-size="12" text-anchor="middle">PRESSURE VALVE</text>
+
+  <!-- Agility Course Elements -->
+  <rect x="250" y="300" width="40" height="40" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <text x="270" y="360" font-family="Consolas, monospace" fill="#00ff00" font-size="10" text-anchor="middle">AGILITY START</text>
+  <path d="M 290 320 Q 400 200 650 280" fill="none" stroke="#00ff00" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrow)"/>
+
+  <!-- 5. Key -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="200" height="120" fill="#00091a" stroke="white" stroke-width="2"/>
+    <text x="20" y="30" font-family="Consolas, monospace" fill="white" font-size="16" font-weight="bold">ISLE OF SKRAP</text>
+    <text x="20" y="50" font-family="Consolas, monospace" fill="#00ffff" font-size="12">LEVEL: +1 (The Deck)</text>
+    <text x="20" y="70" font-family="Consolas, monospace" fill="white" font-size="12">GRID: 64x64</text>
+    <text x="20" y="90" font-family="Consolas, monospace" fill="#00ff00" font-size="12">GREEN = Agility</text>
+    <text x="20" y="105" font-family="Consolas, monospace" fill="#00ffff" font-size="12">HATCH = Metal Floor</text>
+  </g>
+
+</svg>
+

@@ -1,0 +1,53 @@
+<svg width="1024" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Border Frame -->
+  <rect x="0" y="0" width="1024" height="600" fill="none" stroke="#212121" stroke-width="20" />
+  
+  <!-- Tile Rulers on Border -->
+  <!-- Vertical (Z-Height) -->
+  <line x1="0" y1="500" x2="20" y2="500" stroke="white" stroke-width="2"/> <text x="25" y="505" fill="white" font-size="12">Z:0</text>
+  <line x1="0" y1="400" x2="20" y2="400" stroke="white" stroke-width="2"/> <text x="25" y="405" fill="white" font-size="12">Z:1</text>
+  <line x1="0" y1="300" x2="20" y2="300" stroke="white" stroke-width="2"/> <text x="25" y="305" fill="white" font-size="12">Z:2</text>
+  <line x1="0" y1="200" x2="20" y2="200" stroke="white" stroke-width="2"/> <text x="25" y="205" fill="white" font-size="12">Z:3</text>
+
+  <!-- Sky -->
+  <rect x="10" y="10" width="1004" height="580" fill="#87CEEB" />
+  
+  <!-- Water -->
+  <rect x="10" y="450" width="1004" height="140" fill="#006994" opacity="0.9" />
+  <text x="60" y="480" font-family="Arial" font-size="20" fill="white">SEA LEVEL (Z:0)</text>
+
+  <!-- The Massive Heap (Flotsheim) -->
+  <!-- Base Layer: Crushed Hulls -->
+  <path d="M 100 500 L 900 500 L 850 450 L 150 450 Z" fill="#3E2723" stroke="black" stroke-width="2" />
+  
+  <!-- Layer 1: The Stack -->
+  <g transform="translate(200, 250)">
+    <!-- Ship 1 (Bottom) -->
+    <path d="M 0 200 L 400 200 L 380 120 L 20 120 Z" fill="#5D4037" stroke="black" stroke-width="2" />
+    <!-- Ship 2 (Middle - Tilted) -->
+    <path d="M 50 120 L 350 100 L 330 40 L 30 60 Z" fill="#6D4C41" stroke="black" stroke-width="2" />
+    <!-- Ship 3 (Top - The Bank) -->
+    <path d="M 80 50 L 300 30 L 280 -20 L 100 0 Z" fill="#795548" stroke="black" stroke-width="2" />
+    
+    <!-- The Ribcage (Integrated) -->
+    <path d="M 120 0 Q 200 -80 280 -20" fill="none" stroke="#EFEBE9" stroke-width="12" stroke-linecap="round" />
+    <path d="M 140 10 Q 200 -60 260 -10" fill="none" stroke="#EFEBE9" stroke-width="12" stroke-linecap="round" />
+    
+    <text x="200" y="-40" font-family="Arial" font-size="24" text-anchor="middle" fill="black" font-weight="bold">THE BANK</text>
+  </g>
+  
+  <!-- Debris Fill -->
+  <circle cx="250" cy="400" r="30" fill="#4E342E" stroke="black" />
+  <rect x="500" y="380" width="60" height="40" fill="#3E2723" stroke="black" transform="rotate(15 500 380)" />
+
+  <!-- Scale Legend -->
+  <g transform="translate(850, 500)">
+    <rect x="0" y="0" width="120" height="80" fill="white" stroke="black" opacity="0.9" />
+    <text x="60" y="20" font-family="Arial" font-size="14" fill="black" text-anchor="middle" font-weight="bold">SCALE</text>
+    
+    <!-- Player Height Reference -->
+    <rect x="20" y="30" width="10" height="30" fill="#EF6C00" />
+    <text x="40" y="50" font-family="Arial" font-size="12" fill="black">Player</text>
+    <text x="40" y="65" font-family="Arial" font-size="10" fill="#666">~2m / 3 Tiles High</text>
+  </g>
+</svg>

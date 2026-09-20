@@ -1,0 +1,145 @@
+<svg width="1024" height="1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles -->
+  <defs>
+    <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M 10 0 L 0 0 0 10" fill="none" stroke="#E0E0E0" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#F5F5F5" />
+  
+  <!-- Title -->
+  <text x="512" y="40" font-family="Arial" font-size="28" text-anchor="middle" fill="#212121" font-weight="bold">FLOTSHEIM: COORDINATE ALIGNED FLOOR PLANS</text>
+  <text x="512" y="65" font-family="Arial" font-size="18" text-anchor="middle" fill="#616161">Grid aligned to World Map (10px = 1 Tile)</text>
+
+  <!-- ================= LEVEL 0 ================= -->
+  <g transform="translate(50, 100)">
+    <!-- Border/Ruler -->
+    <rect x="0" y="0" width="400" height="300" fill="white" stroke="black" stroke-width="2" />
+    <text x="10" y="25" font-family="Arial" font-size="20" font-weight="bold">LEVEL 0 (Water/Base)</text>
+    
+    <!-- Coordinate Rulers (Local View: X 20-60, Y 30-60) -->
+    <!-- X Axis -->
+    <text x="50" y="295" font-size="12">X:25</text>
+    <text x="150" y="295" font-size="12">X:35</text>
+    <text x="250" y="295" font-size="12">X:45</text>
+    <text x="350" y="295" font-size="12">X:55</text>
+    <!-- Y Axis -->
+    <text x="5" y="50" font-size="12">Y:35</text>
+    <text x="5" y="150" font-size="12">Y:45</text>
+    <text x="5" y="250" font-size="12">Y:55</text>
+    
+    <!-- Grid -->
+    <rect x="0" y="30" width="400" height="250" fill="url(#grid)" opacity="0.5"/>
+
+    <!-- Content -->
+    <!-- Hull A (Base) -->
+    <path d="M 50 50 L 350 50 L 320 200 L 80 200 Z" fill="#5D4037" stroke="black" stroke-width="2" opacity="0.8"/>
+    <text x="200" y="120" text-anchor="middle" fill="white" font-weight="bold">BASE HULL</text>
+    
+    <!-- Entrance Ramp (X:35, Y:50 -> Local 150, 200) -->
+    <rect x="130" y="200" width="40" height="30" fill="#8D6E63" stroke="black" />
+    <text x="150" y="220" text-anchor="middle" font-size="10" fill="white">ENTRY</text>
+
+    <!-- NODE A (Up Ladder) at X:35, Y:40 -> Local 150, 100 -->
+    <rect x="140" y="90" width="20" height="20" fill="#FFD700" stroke="black" stroke-width="2"/>
+    <text x="150" y="105" text-anchor="middle" font-weight="bold">A^</text>
+  </g>
+
+  <!-- ================= LEVEL 1 ================= -->
+  <g transform="translate(500, 100)">
+    <!-- Border -->
+    <rect x="0" y="0" width="400" height="300" fill="white" stroke="black" stroke-width="2" />
+    <text x="10" y="25" font-family="Arial" font-size="20" font-weight="bold">LEVEL 1 (Stack)</text>
+    <!-- Rulers -->
+    <text x="50" y="295" font-size="12">X:25</text>
+    <text x="150" y="295" font-size="12">X:35</text>
+    <text x="250" y="295" font-size="12">X:45</text>
+    <text x="5" y="50" font-size="12">Y:35</text>
+    <text x="5" y="150" font-size="12">Y:45</text>
+    <rect x="0" y="30" width="400" height="250" fill="url(#grid)" opacity="0.5"/>
+
+    <!-- Content -->
+    <!-- Walkway connecting A and B -->
+    <rect x="40" y="80" width="120" height="40" fill="#8D6E63" stroke="black" />
+    
+    <!-- House West -->
+    <rect x="20" y="60" width="60" height="60" fill="#3E2723" opacity="0.9"/>
+    
+    <!-- NODE A (Down Ladder) at X:35, Y:40 -> Local 150, 100 -->
+    <rect x="140" y="90" width="20" height="20" fill="#BDBDBD" stroke="black" stroke-width="2"/>
+    <text x="150" y="105" text-anchor="middle" font-weight="bold">Av</text>
+
+    <!-- NODE B (Up Ladder) at X:25, Y:40 -> Local 50, 100 -->
+    <rect x="40" y="90" width="20" height="20" fill="#FF9800" stroke="black" stroke-width="2"/>
+    <text x="50" y="105" text-anchor="middle" font-weight="bold">B^</text>
+  </g>
+
+  <!-- ================= LEVEL 2 ================= -->
+  <g transform="translate(50, 450)">
+    <!-- Border -->
+    <rect x="0" y="0" width="400" height="300" fill="white" stroke="black" stroke-width="2" />
+    <text x="10" y="25" font-family="Arial" font-size="20" font-weight="bold">LEVEL 2 (Upper Deck)</text>
+    <!-- Rulers -->
+    <text x="50" y="295" font-size="12">X:25</text>
+    <text x="150" y="295" font-size="12">X:35</text>
+    <text x="250" y="295" font-size="12">X:45</text>
+    <text x="5" y="50" font-size="12">Y:35</text>
+    <text x="5" y="150" font-size="12">Y:45</text>
+    <rect x="0" y="30" width="400" height="250" fill="url(#grid)" opacity="0.5"/>
+
+    <!-- Content -->
+    <!-- Upper Hull Deck -->
+    <rect x="40" y="40" width="220" height="80" fill="#795548" stroke="black" />
+    
+    <!-- NODE B (Down Ladder) at X:25, Y:40 -> Local 50, 100 -->
+    <rect x="40" y="90" width="20" height="20" fill="#BDBDBD" stroke="black" stroke-width="2"/>
+    <text x="50" y="105" text-anchor="middle" font-weight="bold">Bv</text>
+
+    <!-- NODE C (Stairs Up) at X:45, Y:35 -> Local 250, 50 -->
+    <rect x="230" y="40" width="40" height="40" fill="#F44336" stroke="black" stroke-width="2"/>
+    <text x="250" y="65" text-anchor="middle" font-weight="bold" fill="white">C^</text>
+  </g>
+
+  <!-- ================= LEVEL 3 ================= -->
+  <g transform="translate(500, 450)">
+    <!-- Border -->
+    <rect x="0" y="0" width="400" height="300" fill="white" stroke="black" stroke-width="2" />
+    <text x="10" y="25" font-family="Arial" font-size="20" font-weight="bold">LEVEL 3 (The Ribcage)</text>
+    <!-- Rulers -->
+    <text x="50" y="295" font-size="12">X:25</text>
+    <text x="150" y="295" font-size="12">X:35</text>
+    <text x="250" y="295" font-size="12">X:45</text>
+    <text x="5" y="50" font-size="12">Y:35</text>
+    <text x="5" y="150" font-size="12">Y:45</text>
+    <rect x="0" y="30" width="400" height="250" fill="url(#grid)" opacity="0.5"/>
+
+    <!-- Content -->
+    <!-- Ribcage Shape -->
+    <ellipse cx="200" cy="80" rx="120" ry="60" fill="#EFEBE9" stroke="black" stroke-width="2" />
+    <!-- Bank Booths -->
+    <rect x="160" y="70" width="80" height="20" fill="#616161" stroke="black" />
+    <text x="200" y="85" font-family="Arial" font-size="10" text-anchor="middle" fill="white">BANK</text>
+    
+    <!-- NODE C (Stairs Down) at X:45, Y:35 -> Local 250, 50 -->
+    <rect x="230" y="40" width="40" height="40" fill="#BDBDBD" stroke="black" stroke-width="2"/>
+    <text x="250" y="65" text-anchor="middle" font-weight="bold">Cv</text>
+  </g>
+
+  <!-- ================= LEGEND ================= -->
+  <g transform="translate(400, 800)">
+    <rect x="0" y="0" width="250" height="120" fill="white" stroke="black" stroke-width="2" />
+    <text x="125" y="25" text-anchor="middle" font-weight="bold" font-size="18">ALIGNMENT LEGEND</text>
+    
+    <rect x="20" y="40" width="20" height="20" fill="#FFD700" stroke="black"/>
+    <text x="50" y="55">Node A (Center Shaft)</text>
+    
+    <rect x="20" y="65" width="20" height="20" fill="#FF9800" stroke="black"/>
+    <text x="50" y="80">Node B (West Wing)</text>
+    
+    <rect x="20" y="90" width="20" height="20" fill="#F44336" stroke="black"/>
+    <text x="50" y="105">Node C (Bank Stair)</text>
+  </g>
+
+</svg>

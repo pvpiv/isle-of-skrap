@@ -1,0 +1,45 @@
+<svg width="1024" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Border Frame -->
+  <rect x="0" y="0" width="1024" height="600" fill="none" stroke="#212121" stroke-width="20" />
+
+  <!-- Sky -->
+  <rect x="10" y="10" width="1004" height="580" fill="#87CEEB" />
+  
+  <!-- Water Surface -->
+  <rect x="10" y="300" width="1004" height="290" fill="#0277BD" />
+  
+  <!-- Underwater: The Volcano (Vent) -->
+  <path d="M 400 600 L 624 600 L 512 400 Z" fill="#37474F" stroke="black" />
+  <path d="M 512 400 L 512 300" fill="none" stroke="#E1F5FE" stroke-width="60" opacity="0.4" /> <!-- Steam Column -->
+  
+  <!-- Steam Surface Effect -->
+  <ellipse cx="512" cy="300" rx="100" ry="20" fill="white" opacity="0.6" />
+
+  <!-- The Island Profile (Silhouette) -->
+  <!-- Left Side: Flotsheim (High) -->
+  <path d="M 100 300 L 400 300 L 400 100 L 300 50 L 100 300 Z" fill="#3E2723" stroke="black" stroke-width="3" />
+  <text x="250" y="200" font-family="Arial" font-size="30" text-anchor="middle" fill="white" font-weight="bold">FLOTSHEIM</text>
+  <text x="250" y="230" font-family="Arial" font-size="20" text-anchor="middle" fill="#D7CCC8">(Hoarders: Heavy &amp; High)</text>
+
+  <!-- Right Side: Jettstrom (Low) -->
+  <rect x="624" y="280" width="300" height="20" fill="#616161" stroke="black" stroke-width="3" /> <!-- Docks -->
+  <rect x="850" y="220" width="40" height="60" fill="#FFD700" stroke="black" /> <!-- Crane -->
+  <text x="774" y="260" font-family="Arial" font-size="30" text-anchor="middle" fill="white" font-weight="bold">JETTSTROM</text>
+  <text x="774" y="290" font-family="Arial" font-size="20" text-anchor="middle" fill="black">(Traders: Flat &amp; Low)</text>
+
+  <!-- Labels -->
+  <text x="512" y="50" font-family="Arial" font-size="36" text-anchor="middle" fill="black" font-weight="bold" text-decoration="underline">FULL ISLAND PROFILE</text>
+  <line x1="512" y1="300" x2="512" y2="400" stroke="white" stroke-width="2" stroke-dasharray="5,5" />
+  <text x="520" y="380" font-family="Arial" font-size="16" fill="white">Thermal Vent Source</text>
+
+  <!-- Scale Legend -->
+  <g transform="translate(850, 500)">
+    <rect x="0" y="0" width="150" height="80" fill="white" stroke="black" opacity="0.9" />
+    <text x="75" y="20" font-family="Arial" font-size="14" fill="black" text-anchor="middle" font-weight="bold">HEIGHT SCALE</text>
+    
+    <!-- Level Ref -->
+    <rect x="20" y="35" width="20" height="10" fill="none" stroke="black" stroke-width="1" />
+    <text x="50" y="45" font-family="Arial" font-size="12" fill="black">= ~1 Floor (Z-lvl)</text>
+    <text x="50" y="65" font-family="Arial" font-size="10" fill="#666">(Standard OSRS height)</text>
+  </g>
+</svg>

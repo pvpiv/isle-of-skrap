@@ -1,0 +1,41 @@
+<svg width="512" height="334" xmlns="http://www.w3.org/2000/svg">
+  <!-- Border -->
+  <rect x="0" y="0" width="512" height="334" fill="none" stroke="#212121" stroke-width="10" />
+
+  <!-- OSRS Interface Background -->
+  <rect x="5" y="5" width="502" height="324" fill="#4E342E" stroke="#2D1F1B" stroke-width="4" rx="10" />
+  
+  <!-- Header -->
+  <text x="256" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="#FFD700" font-weight="bold">The Jettstrom Recycler</text>
+  <line x1="20" y1="50" x2="492" y2="50" stroke="#2D1F1B" stroke-width="2" />
+
+  <!-- Input Slot -->
+  <rect x="80" y="100" width="64" height="64" fill="#3E2723" stroke="#1A120F" stroke-width="2" />
+  <text x="112" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#FF9800">INPUT</text>
+  <!-- Example Item: Rune Platebody (Cyan Box) -->
+  <rect x="96" y="116" width="32" height="32" fill="#00FFFF" opacity="0.8" />
+  
+  <!-- Arrow -->
+  <path d="M 180 132 L 250 132 L 250 110 L 290 140 L 250 170 L 250 148 L 180 148 Z" fill="#FFD700" stroke="black" />
+
+  <!-- Output Slots -->
+  <rect x="330" y="100" width="64" height="64" fill="#3E2723" stroke="#1A120F" stroke-width="2" />
+  <text x="362" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#FF9800">ORE</text>
+  <!-- Example Output: Runite Ore (Blue Circle) -->
+  <circle cx="362" cy="132" r="16" fill="#00ACC1" />
+  <text x="340" y="115" font-family="Arial" font-size="12" fill="yellow">3</text> <!-- Stack Count -->
+
+  <rect x="400" y="100" width="64" height="64" fill="#3E2723" stroke="#1A120F" stroke-width="2" />
+  <text x="432" y="185" font-family="Arial" font-size="14" text-anchor="middle" fill="#FF9800">COAL</text>
+  <!-- Example Output: Coal (Black Circle) -->
+  <circle cx="432" cy="132" r="16" fill="#212121" />
+  <text x="410" y="115" font-family="Arial" font-size="12" fill="yellow">24</text> <!-- Stack Count -->
+
+  <!-- Process Button -->
+  <rect x="180" y="220" width="152" height="40" fill="#2E7D32" stroke="black" rx="5" />
+  <text x="256" y="248" font-family="Arial" font-size="18" text-anchor="middle" fill="white" font-weight="bold">CRUSH IT!</text>
+
+  <!-- Warning Text -->
+  <text x="256" y="300" font-family="Arial" font-size="12" text-anchor="middle" fill="#B0BEC5" font-style="italic">"Warning: Items are destroyed permanently."</text>
+
+</svg>

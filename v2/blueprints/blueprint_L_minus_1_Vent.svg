@@ -1,0 +1,62 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <!-- 
+    ISLE OF SKRAP - LEVEL -1: THE CORE (UNDERWATER VENT)
+    Scale: 64x64 Tiles
+  -->
+
+  <!-- 1. Background (Deep Sea/Magma) -->
+  <rect x="0" y="0" width="1024" height="1024" fill="#000d1a" />
+
+  <!-- 2. Grid System -->
+  <defs>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M 16 0 L 0 0 0 16" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+    </pattern>
+    <pattern id="grid-major" width="128" height="128" patternUnits="userSpaceOnUse">
+      <rect width="128" height="128" fill="url(#grid)" />
+      <path d="M 128 0 L 0 0 0 128" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
+    </pattern>
+    <radialGradient id="magma" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#ff3300;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#330000;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#grid-major)" />
+
+  <!-- 3. The Vent (Heat Source) -->
+  <circle cx="512" cy="512" r="200" fill="url(#magma)" opacity="0.6"/>
+  <circle cx="512" cy="512" r="50" fill="#ff4500" stroke="#ffff00" stroke-width="4"/>
+  <text x="512" y="517" font-family="Consolas, monospace" fill="#ffff00" font-size="16" text-anchor="middle" font-weight="bold">MAGMA CORE</text>
+  
+  <!-- 4. Glass Tunnels (Playable Area) -->
+  <!-- Ring around the vent -->
+  <path d="M 512 300 A 212 212 0 1 1 511 300" fill="none" stroke="#00aaff" stroke-width="40" opacity="0.5"/>
+  <path d="M 512 300 A 212 212 0 1 1 511 300" fill="none" stroke="white" stroke-width="2" />
+  
+  <!-- Entrance Shaft (From L0) -->
+  <rect x="492" y="280" width="40" height="60" fill="#000d1a" stroke="white" stroke-width="2"/>
+  <text x="512" y="270" font-family="Consolas, monospace" fill="white" font-size="12" text-anchor="middle">LADDER UP (Z:0)</text>
+
+  <!-- 5. Hub Features -->
+  
+  <!-- Infinite Fire (Cooking) -->
+  <circle cx="680" cy="512" r="30" fill="none" stroke="#ff8800" stroke-width="2"/>
+  <text x="730" y="517" font-family="Consolas, monospace" fill="#ff8800" font-size="14">STEAM OVEN</text>
+  <text x="730" y="535" font-family="Consolas, monospace" fill="#ff8800" font-size="10">(Burn % Reduced)</text>
+
+  <!-- The Anchor (Quest Object) -->
+  <rect x="400" y="600" width="80" height="80" fill="none" stroke="#ffd700" stroke-width="2" stroke-dasharray="5,2"/>
+  <text x="440" y="645" font-family="Consolas, monospace" fill="#ffd700" font-size="12" text-anchor="middle">THE ANCHOR</text>
+  <text x="440" y="660" font-family="Consolas, monospace" fill="#ffd700" font-size="10" text-anchor="middle">(Quest Only)</text>
+
+  <!-- 6. Key -->
+  <g transform="translate(50, 50)">
+    <rect x="0" y="0" width="200" height="120" fill="#00091a" stroke="white" stroke-width="2"/>
+    <text x="20" y="30" font-family="Consolas, monospace" fill="white" font-size="16" font-weight="bold">ISLE OF SKRAP</text>
+    <text x="20" y="50" font-family="Consolas, monospace" fill="#ff4444" font-size="12">LEVEL: -1 (The Core)</text>
+    <text x="20" y="70" font-family="Consolas, monospace" fill="white" font-size="12">GRID: 64x64</text>
+    <text x="20" y="90" font-family="Consolas, monospace" fill="#00aaff" font-size="12">BLUE = Glass Tunnel</text>
+  </g>
+
+</svg>
+
